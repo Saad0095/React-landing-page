@@ -32,7 +32,10 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-16 text-center px-20 backdrop-blur-md">
+    <section
+      id="testimonials"
+      className="py-20 text-center px-5 md:px-20 backdrop-blur-md"
+    >
       <h2 className="text-3xl font-bold mb-10 text-white">What Clients Say</h2>
 
       <Swiper
@@ -48,17 +51,12 @@ const Testimonials = () => {
         {testimonials.map((t, i) => (
           <SwiperSlide key={i}>
             <div className="max-w-md mx-auto p-6 bg-white/5 border border-primary text-white rounded-lg shadow hover:shadow-lg transition hover:bg-primary">
-              {/* <div className="flex justify-center mb-3 text-yellow-400">
-                {[...Array(5)].map((_, index) => (
-                  <FaStar key={index} size={18} />
-                ))}
-              </div> */}
               <div className="flex justify-center mb-3 text-yellow-400">
                 {[...Array(t.rating)].map((_, index) => (
                   <FaStar key={index} size={19} />
                 ))}
               </div>
-              <p className="text-base italic mb-4">"{t.text}"</p>
+              <p className="text-base italic mb-4 text-gray-200">"{t.text}"</p>
               <h3 className="font-semibold">{t.name}</h3>
             </div>
           </SwiperSlide>
