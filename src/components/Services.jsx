@@ -1,34 +1,43 @@
-// Services.jsx
+import { FaCode, FaWordpress, FaPaintBrush } from "react-icons/fa";
+
 const services = [
   {
     title: "Custom Website Design",
-    description: "Tailored UI/UX to match your brand.",
+    description:
+      "We craft beautiful, user-friendly designs tailored to your brand identity. From wireframes to final UI/UX — we ensure every element speaks your brand language.",
+    icon: <FaPaintBrush size={32} />,
   },
   {
     title: "React Development",
-    description: "Fast, scalable web applications with React.js",
+    description:
+      "We build high-performance, scalable, and responsive web apps using modern React.js practices. Perfect for startups and fast-moving businesses.",
+    icon: <FaCode size={32} />,
   },
   {
     title: "WordPress Sites",
-    description: "SEO-optimized, responsive websites using Elementor & Astra.",
+    description:
+      "Fully customizable WordPress websites using Elementor and Astra. SEO-optimized, mobile-ready, and easy for you to manage without code.",
+    icon: <FaWordpress size={32} />,
   },
 ];
+
 const Services = () => {
   return (
-    <section className="py-16 px-4 bg-white">
-      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
-        Our Services
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <section className="py-16 px-4">
+      <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-center ">
         {services.map((service, i) => (
           <div
             key={i}
-            className="bg-indigo-50 p-6 rounded-xl shadow hover:shadow-lg transition border border-indigo-100"
+            className="p-6 rounded-xl shadow hover:shadow-lg transition border border-primary bg-white/5 backdrop-blur-md hover:bg-primary"
           >
-            <h3 className="text-xl font-semibold mb-2 text-indigo-800">
+            <div className="mb-4 flex justify-center items-center ">
+              {service.icon}
+            </div>
+            <h3 className="text-xl font-semibold mb-2 text-white">
               {service.title}
             </h3>
-            <p className="text-gray-600">{service.description}</p>
+            <p className="text-gray-300 text-sm">{service.description}</p>
           </div>
         ))}
       </div>
