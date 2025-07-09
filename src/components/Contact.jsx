@@ -19,7 +19,6 @@ const Contact = () => {
       </p>
       <div className="flex flex-col md:flex-row justify-center gap-10 mx-auto md:w-10/12">
         <Form />
-        {/* <ContactInfo/> */}
       </div>
     </div>
   );

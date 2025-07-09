@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";
 import "swiper/css";
 
 const testimonials = [
@@ -36,7 +37,15 @@ const Testimonials = () => {
       id="testimonials"
       className="py-20 text-center px-5 md:px-20 backdrop-blur-md"
     >
-      <h2 className="text-3xl font-bold mb-10 text-white">What Clients Say</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-3xl font-bold mb-10 text-white"
+      >
+        What Clients Say
+      </motion.h2>
 
       <Swiper
         spaceBetween={30}
@@ -50,7 +59,13 @@ const Testimonials = () => {
       >
         {testimonials.map((t, i) => (
           <SwiperSlide key={i}>
-            <div className="max-w-md mx-auto p-6 bg-white/5 border border-primary text-white rounded-lg shadow hover:shadow-lg transition hover:bg-primary">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              viewport={{ once: true }}
+              className="max-w-md mx-auto p-6 bg-white/5 border border-primary text-white rounded-lg shadow hover:shadow-lg transition hover:bg-primary"
+            >
               <div className="flex justify-center mb-3 text-yellow-400">
                 {[...Array(t.rating)].map((_, index) => (
                   <FaStar key={index} size={19} />
@@ -58,7 +73,7 @@ const Testimonials = () => {
               </div>
               <p className="text-base italic mb-4 text-gray-200">"{t.text}"</p>
               <h3 className="font-semibold">{t.name}</h3>
-            </div>
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>

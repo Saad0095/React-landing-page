@@ -1,4 +1,5 @@
 import { FaCode, FaWordpress, FaPaintBrush } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -24,21 +25,34 @@ const services = [
 const Services = () => {
   return (
     <section id="services" className="py-20 px-4">
-      <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-center ">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-3xl font-bold text-center mb-10 text-white"
+      >
+        Our Services
+      </motion.h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-center">
         {services.map((service, i) => (
-          <div
+          <motion.div
             key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
             className="p-6 rounded-xl shadow hover:shadow-lg transition border border-primary bg-white/5 backdrop-blur-md hover:bg-primary"
           >
-            <div className="mb-4 flex justify-center items-center ">
+            <div className="mb-4 flex justify-center items-center text-white">
               {service.icon}
             </div>
             <h3 className="text-xl font-semibold mb-2 text-white">
               {service.title}
             </h3>
             <p className="text-gray-300 text-sm">{service.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

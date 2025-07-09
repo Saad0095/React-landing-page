@@ -1,12 +1,66 @@
-# React + Vite
+# 🌐 SkyGrid Studio — Modern 1-Page React Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a fully responsive, pixel-perfect landing page built using **React**, **Tailwind CSS**, and **Framer Motion**.  
+It was developed as a demonstration of my front-end skills and ability to build real-world UIs from scratch.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+👉 [Click to View Live Site](https://react-landing-page-jade-six.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** – Component-based UI
+- **Tailwind CSS** – Utility-first styling
+- **Framer Motion** – Smooth animations for the hero section
+- **React Icons** – For responsive menu icons
+- **Swiper.js** – Testimonial slider
+- **Vite** – Lightning-fast dev environment
+
+---
+
+## 📋 Features
+
+✅ Hero Section with animation  
+✅ Services Grid (3 cards)  
+✅ Testimonials Slider (Swiper)  
+✅ Contact Form UI (no backend)  
+✅ Mobile-friendly Responsive Navbar  
+✅ Clean, modern design with consistent color palette  
+✅ Fully responsive on all screen sizes
+
+---
+
+## 📂 Folder Structure
+
+```
+src/
+├── components/
+│ ├── Navbar.jsx
+│ ├── Hero.jsx
+│ ├── Services.jsx
+│ ├── Testimonials.jsx
+│ ├── ContactForm.jsx
+│ └── Footer.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+
+```
+
+---
+
+## 📩 Contact
+
+Developed by **[Muhammad Saad Bin Khalid](https://www.linkedin.com/in/saad-bin-khalid-b077b8243/)**  
+GitHub: [Saad0095](https://github.com/Saad0095)
+
+---
+
+## 🔖 License
+
+This project is open for learning/demo purposes. Please don’t use it for commercial projects without permission.
+
